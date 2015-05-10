@@ -25,6 +25,7 @@
         <!-- List of XML mapping files -->
         <mapping class="Bank"/>
         <mapping class="BankBranch"/>
+        <mapping class="BankAccount"/>
 
     </session-factory>
 </hibernate-configuration>
