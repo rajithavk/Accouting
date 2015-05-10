@@ -13,5 +13,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.hibernate:hibernate:3.2.5.ga" level="project" />
     <orderEntry type="library" name="com.mysql.jdbc:com.springsource.com.mysql.jdbc:5.1.6" level="project" />
+    <orderEntry type="library" name="javax.persistence:persistence-api:1.0.2" level="project" />
+    <orderEntry type="library" name="org.hibernate:hibernate-annotations:3.2.0.ga" level="project" />
   </component>
 </module>

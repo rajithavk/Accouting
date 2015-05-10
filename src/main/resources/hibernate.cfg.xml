@@ -23,8 +23,8 @@
         </property>
 
         <!-- List of XML mapping files -->
-        <mapping resource="Bank.hbm.xml"/>
-        <mapping resource="BankBranch.hbm.xml"/>
+        <mapping class="Bank"/>
+        <mapping class="BankBranch"/>
 
     </session-factory>
 </hibernate-configuration>

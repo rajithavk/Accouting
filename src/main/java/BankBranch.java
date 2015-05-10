@@ -3,13 +3,29 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Created by romba on 5/10/15.
  */
+@Entity
+@Table(name="bank_branches")
 public class BankBranch{
+    @Id
+    @GeneratedValue
     private int id = -1;
+
+    @Column(name="branch")
     private String branch;
+
+    @Column(name="location")
     private String location;
+
+    @Column(name="code")
     private String code;
 
     public BankBranch(){}

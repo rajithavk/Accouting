@@ -1,5 +1,5 @@
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  * Created by romba on 5/10/15.
@@ -10,7 +10,7 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory(){
         try{
-            return new Configuration()
+            return new AnnotationConfiguration()
                     .configure()
                     .buildSessionFactory();
 
