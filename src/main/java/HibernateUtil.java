@@ -1,25 +1,32 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package accountingsample;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
- * Created by romba on 5/10/15.
- * Creates a static SessionFactory for the DB access through Hibernate.
+ *
+ * @author UDARA
  */
 public class HibernateUtil {
-    private static final SessionFactory sessionFactory = buildSessionFactory();
-
-    private static SessionFactory buildSessionFactory(){
-        try{
-            return new AnnotationConfiguration()
-                    .configure()
-                    .buildSessionFactory();
-
-        }catch(Throwable ex){
-            System.err.println("Session Factory Creation Error");
+    private static final SessionFactory sessionFactory;
+ 
+    static {
+        try {
+            // Create the SessionFactory from standard (hibernate.cfg.xml)
+            // config file.
+            sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
+        } catch (Throwable ex) {
+            // Log the exception.
+            System.err.println("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
-    public  static SessionFactory getSessionFactory(){
+ 
+    public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
 }
